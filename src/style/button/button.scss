@@ -1,0 +1,62 @@
+.primary-btn {
+   button {
+      background-color: var(--theme-bg-color-1);
+      color: var(--theme-clr2);
+      @include paragraph-sm;
+      border: transparent;
+      border-radius: 40px;
+   }
+}
+
+.primary-secondHand-btn {
+   button {
+      background-color: var(--theme-bg-color-1);
+      color: var(--theme-clr2);
+      @include paragraph-ssm;
+      border: 1px solid var(--theme-clr);
+      border-radius: 40px;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+         background-color: var(--theme-bg-color2);
+         color: var(--theme-clr);
+         @include paragraph-ssm;
+         border: 1px solid var(--theme-clr);
+         transition: all 0.5s ease-in-out;
+
+      }
+   }
+
+}
+
+.primary-thirdHand-btn {
+   button {
+      background-color: var(--theme-bg-color2);
+      color: var(--theme-font-color1);
+      @include paragraph-ssm;
+      border: 1px solid var(--theme-clr);
+      border-radius: 40px;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+         background-color: var(--theme-bg-color-1);
+         color: var(--theme-font-color2);
+         @include paragraph-ssm;
+         border: 1px solid var(--theme-clr);
+         transition: all 0.5s ease-in-out;
+      }
+   }
+
+}
+
+
+
+.transparent-btn {
+   button {
+      background-color: transparent;
+      color: var(--theme-clr2);
+      @include paragraph-sm;
+      border: transparent;
+      border-radius: 40px;
+   }
+}

@@ -1,0 +1,310 @@
+@import '../../../style/global.scss';
+
+.herobannerBg {
+   max-width: 100%;
+   height: auto;
+   background-image: url("../../../assets/images/herobannerBgImg.jpeg");
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 75px 48px;
+
+   @media (max-width: 768px) {
+      padding: 48px 30px 200px 30px;
+   }
+
+   @media (max-width: 576px) {
+      padding: 48px 15px 200px 15px;
+   }
+
+   .herobannerText {
+      max-width: 100%;
+
+      h1 {
+         @include heading-xxxl;
+         color: var(--theme-font-color2);
+         margin-bottom: 30px;
+
+         @media (max-width: 768px) {
+            @include heading-lg;
+            margin-bottom: 20px;
+         }
+
+         @media (max-width: 576px) {
+            @include heading-md;
+            margin-bottom: 10px;
+         }
+
+      }
+
+      p {
+         @include paragraph-sm;
+         color: var(--theme-font-color2);
+         margin-bottom: 20px;
+         max-width: 530px;
+
+         @media (max-width: 768px) {
+            @include paragraph-sm;
+            margin-bottom: 15px;
+         }
+
+         @media (max-width: 576px) {
+            @include paragraph-ssm;
+            margin-bottom: 15px;
+         }
+
+      }
+   }
+
+   .btnGroup {
+      @include flex-align;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      @media (max-width: 576px) {
+         display: flex;
+         justify-content: center;
+      }
+
+
+      .btnPositionLeft {
+         position: relative;
+         min-width: 170px;
+         background-color: var(--theme-bg-color-1);
+         border-radius: 40px;
+         transition: all ease-in-out 0.4s;
+
+
+         .primary-btn {
+            button {
+               padding: 14px 26px;
+            }
+         }
+
+         .arrowIcon {
+            position: absolute;
+            top: 13px;
+            right: 15px;
+
+            svg {
+               color: var(--theme-clr2);
+               @include paragraph-lg;
+            }
+         }
+
+         &:hover .arrowIcon {
+            position: absolute;
+            top: 13px;
+            right: 10px;
+            transition: all ease-in-out 0.4s;
+         }
+      }
+
+      .btnPositionRight {
+         position: relative;
+         min-width: 170px;
+         background-color: transparent;
+         border-radius: 40px;
+         transition: all ease-in-out 0.4s;
+         border: 1px solid var(--theme-clr2);
+         padding-left: 20px;
+
+
+         .transparent-btn {
+            button {
+               padding: 14px 26px;
+            }
+         }
+
+         .diamondIcon {
+            position: absolute;
+            top: 13px;
+            left: 15px;
+
+
+            svg {
+               color: var(--theme-clr2);
+               @include paragraph-lg;
+            }
+         }
+      }
+   }
+
+   .positionSettelment {
+      position: relative;
+      max-width: 100%;
+      height: 100%;
+
+      .boxOfSaller {
+         max-width: 240px;
+         height: auto;
+         position: absolute;
+         top: -30px;
+         right: 0px;
+         @include flex-justify-center;
+         flex-direction: column;
+         background-color: rgba(103, 105, 111, 0.5);
+         padding: 14px 30px;
+         border-radius: 10px;
+
+         @media (max-width:768px) {
+            position: absolute;
+            top: 20px;
+            right: 0px;
+            padding: 14px 30px;
+         }
+
+         @media (max-width:576px) {
+            max-width: 240px;
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            padding: 14px 20px;
+         }
+
+         .stockImg {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 8px;
+
+            @media (max-width:576px) {
+               width: 40px;
+               height: 40px;
+            }
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+
+         .stockHeadingWord {
+            text-align: center;
+
+            h4 {
+               @include heading-lg;
+               color: var(--theme-font-color2);
+               margin-bottom: 5px;
+
+               @media (max-width:576px) {
+                  @include heading-md;
+                  color: var(--theme-font-color2);
+                  margin-bottom: 5px;
+               }
+            }
+
+            p {
+               @include paragraph-sm;
+               color: var(--theme-font-color2);
+
+               @media (max-width:576px) {
+                  @include paragraph-ssm;
+                  color: var(--theme-font-color2);
+               }
+            }
+         }
+      }
+
+      .activeUser {
+         min-width: 270px;
+         position: absolute;
+         bottom: -30px;
+         left: 0px;
+         background-color: rgba(103, 105, 111, 0.5);
+         @include flex-justify-space-beetween;
+         border-radius: 50px;
+         padding: 10px 24px;
+
+         @media (max-width:768px) {
+            position: absolute;
+            bottom: -160px;
+            left: 0px;
+         }
+
+         @media (max-width:576px) {
+            min-width: 190px;
+            position: absolute;
+            bottom: -120px;
+            padding: 10px 14px;
+            left: -20px;
+         }
+
+         .activeUserProfile {
+            @include flex-align;
+
+            .profilePicPosition {
+
+               .profilePic {
+                  width: 44px;
+                  height: 44px;
+
+                  @media (max-width:576px) {
+                     width: 32px;
+                     height: 32px;
+                  }
+
+                  img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;
+                     border: var(--theme-user-border) 1px solid;
+                     border-radius: 50%;
+                  }
+               }
+            }
+
+            .profilePicPosition2,
+            .profilePicPosition3 {
+               margin-left: -16px;
+               z-index: 10;
+
+               .profilePic {
+                  width: 44px;
+                  height: 44px;
+
+                  @media (max-width:576px) {
+                     width: 32px;
+                     height: 32px;
+                  }
+
+                  img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;
+                     border: var(--theme-user-border) 1px solid;
+                     border-radius: 50%;
+                  }
+               }
+            }
+         }
+
+         .activeUserText {
+            @include only-flex-align;
+
+            h4 {
+               @include heading-lg;
+               color: var(--theme-font-color2);
+               margin-bottom: 3px;
+
+               @media (max-width:576px) {
+                  @include heading-md;
+                  color: var(--theme-font-color2);
+                  margin-bottom: 5px;
+               }
+            }
+
+            p {
+               @include paragraph-sm;
+               color: var(--theme-font-color2);
+
+               @media (max-width:576px) {
+                  @include paragraph-ssm;
+                  color: var(--theme-font-color2);
+               }
+
+            }
+         }
+      }
+   }
+}

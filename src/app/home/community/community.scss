@@ -1,0 +1,118 @@
+@import '../../../style/global.scss';
+
+.communityBg {
+   margin-bottom: 50px;
+   padding: 50px;
+   box-shadow: 5px 5px 20px rgba(211, 212, 214, 1);
+
+   @media (max-width:768px) {
+      margin-bottom: 30px;
+      padding: 30px;
+   }
+
+   @media (max-width:576px) {
+      margin-bottom: 20px;
+      padding: 20px;
+   }
+
+   .communityImg {
+      max-width: 100%;
+      height: 300px;
+
+      @media (max-width:768px) {
+         max-width: 100%;
+         height: 250px;
+      }
+
+      @media (max-width:576px) {
+         max-width: 100%;
+         height: 200px;
+      }
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 20px;
+      }
+   }
+
+   .communityDisc {
+      h2 {
+         @include heading-lg;
+         margin-bottom: 10px;
+         color: var(--theme-font-color1);
+
+         @media (max-width:768px) {
+            @include heading-md;
+            margin-bottom: 10px;
+         }
+
+         @media (max-width:576px) {
+            @include heading-md;
+            margin-bottom: 5px;
+            margin-top: 30px;
+         }
+      }
+
+      p {
+         @include paragraph-sm;
+         margin-bottom: 10px;
+
+         @media (max-width:768px) {
+            @include paragraph-ssm;
+            margin-bottom: 10px;
+         }
+
+         @media (max-width:576px) {
+            @include paragraph-ssm;
+            margin-bottom: 10px;
+         }
+      }
+
+      .inputField {
+         @include only-flex;
+
+
+         @media (max-width:576px) {
+            @include only-flex;
+            flex-direction: column;
+            margin-top: 20px;
+         }
+
+         input {
+            border-radius: 5px;
+            max-width: 300px;
+            height: 45px;
+            outline: none;
+            padding: 0px 20px;
+            border: none;
+            background-color: var(--theme-bg-color4);
+            @include paragraph-ssm;
+
+            @media (max-width:576px) {
+               margin-top: 10px;
+               max-width: 100%;
+            }
+         }
+
+         .primary-btn {
+            button {
+               border-radius: 5px;
+               padding: 10px;
+
+               @media (max-width:576px) {
+                  margin-top: 10px;
+                  width: 100%;
+               }
+            }
+
+
+         }
+
+      }
+   }
+
+
+
+}

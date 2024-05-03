@@ -1,0 +1,165 @@
+@import '../../../style/global.scss';
+
+.creatorsSection {
+   padding: 50px 0px;
+   background-color: var(--theme-bg-color2);
+
+   @media (max-width:768px) {
+      padding: 40px 0px;
+
+   }
+
+   @media (max-width:576px) {
+      padding: 20px 0px;
+
+   }
+
+   .creatorsSpaceBetween {
+      @include flex-justify-space-beetween;
+      margin-bottom: 30px;
+
+      .creatorHeading {
+         h2 {
+            color: var(--theme-font-color3);
+            @include heading-lg;
+
+            @media (max-width:768px) {
+               color: var(--theme-font-color3);
+               @include heading-md;
+
+            }
+
+            @media (max-width:576px) {
+               @include heading-md;
+               color: var(--theme-font-color3);
+            }
+         }
+      }
+
+      .creatorText {
+         p {
+            font-size: 25px;
+            color: var(--theme-font-color1)
+         }
+      }
+   }
+
+   .creatorsGrid {
+      @include grid-7;
+      gap: 20px 10px;
+      max-width: 100%;
+      margin-top: 50px;
+
+      @media (max-width: 1280px) {
+         margin-top: 40px;
+         @include grid-5;
+      }
+
+      @media (max-width: 900px) {
+         margin-top: 30px;
+         @include grid-3;
+      }
+
+      @media (max-width: 576px) {
+         margin-top: 20px;
+         @include grid-2;
+      }
+
+      .creatorsCards {
+         max-width: 100%;
+         height: auto;
+         padding: 20px 10px;
+         border: 1px solid rgba(211, 212, 214, 1);
+         border-radius: 15px;
+         position: relative;
+
+         @media (max-width:768px) {
+            padding: 20px 8px;
+
+         }
+
+         @media (max-width:576px) {
+            padding: 20px 5px;
+
+         }
+
+         .marginData {
+            @include flex-justify-center;
+            flex-direction: column;
+            text-align: center;
+
+            .creatorsCardsImg {
+               width: 60px;
+               height: 60px;
+               margin-bottom: 10px;
+
+               img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 50%;
+                  border: 1px solid var(--theme-user-border);
+               }
+            }
+
+            .creatorsCardsHeading {
+               h3 {
+                  @include heading-md-big;
+                  color: var(--theme-font-color3);
+                  margin-bottom: 7px;
+                  text-transform: capitalize;
+
+                  @media (max-width:768px) {
+                     @include heading-md;
+                     color: var(--theme-font-color3);
+                     margin-bottom: 5px;
+                  }
+
+                  @media (max-width:576px) {
+                     @include heading-sm;
+                     color: var(--theme-font-color3);
+                     margin-bottom: 4px;
+                  }
+               }
+
+               p,
+               span {
+                  @include paragraph-ssm;
+                  color: var(--theme-font-color3);
+                  margin-bottom: 5px;
+
+                  @media (max-width:768px) {
+                     margin-bottom: 4px;
+                  }
+
+                  @media (max-width:576px) {
+                     margin-bottom: 3px;
+                  }
+               }
+
+               span {
+                  color: var(--theme-font-color1);
+               }
+            }
+         }
+
+         .numberOfCards {
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 26px;
+            height: 26px;
+            background-color: rgba(182, 165, 254, 1);
+            border-radius: 50%;
+            @include only-flex-align;
+
+            p {
+               @include paragraph-sm;
+               color: var(--theme-font-color2);
+               margin-bottom: 0px;
+            }
+         }
+      }
+   }
+}

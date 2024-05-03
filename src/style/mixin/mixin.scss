@@ -1,0 +1,62 @@
+@mixin only-flex {
+   display: flex;
+}
+
+@mixin flex-align {
+   display: flex;
+   align-items: center;
+}
+
+@mixin only-flex-align {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+@mixin flex-justify-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin flex-justify-space-beetween {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+@mixin grid {
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+}
+
+@mixin grid-2 {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin grid-3 {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin grid-4 {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+
+@mixin grid-5 {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+}
+
+@mixin grid-6 {
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+}
+
+@mixin grid-7 {
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+}

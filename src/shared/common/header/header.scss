@@ -1,0 +1,230 @@
+@import '../../../style/global.scss';
+
+header {
+   @include flex-justify-space-beetween;
+   background-color: var(--theme-bg-color2);
+   padding: 20px 20px;
+   gap: 30px;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+
+
+   .leftDirectionNav {
+      @include flex-align;
+      gap: 20px;
+
+      .logo {
+         width: 180px;
+         height: auto;
+
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+
+      .searchBox {
+         @include flex-justify-center;
+         position: relative;
+         background-color: var(--theme-bg-color4);
+         border-radius: 5px;
+         padding: 0px 10px;
+         gap: 10px;
+         max-width: 400px;
+
+         @media (max-width:1070px) {
+            display: none;
+         }
+
+         .searchIcon {
+            width: 20px;
+            height: auto;
+            @include flex-justify-center;
+
+            svg {
+               width: 20px;
+               height: auto;
+               color: var(--theme-clr);
+            }
+         }
+
+         .formInfo {
+
+            form {
+               max-width: 300px;
+               height: auto;
+
+               input {
+                  width: 100%;
+                  height: 40px;
+                  background-color: var(--theme-bg-color4);
+                  border: 0;
+                  outline: none;
+               }
+            }
+         }
+      }
+   }
+
+   .rightDirectionNav {
+      @include flex-justify-center;
+      gap: 30px;
+
+      .blackMainData {
+         display: block;
+         @include flex-justify-center;
+         gap: 30px;
+         position: relative;
+
+         @media (max-width:1070px) {
+            @include flex-justify-center;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 30px;
+            position: fixed;
+            top: 89px;
+            right: 0px;
+            width: 0px;
+            height: 100vh;
+            padding: 60px 0px 0px 0px;
+            background-color: var(--theme-bg-color2);
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+         }
+
+
+         .navBar {
+            nav {
+               @include flex-align;
+               gap: 20px;
+
+               @media (max-width:1070px) {
+                  @include flex-justify-center;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  gap: 30px;
+               }
+
+               a {
+                  @include paragraph-sm;
+                  display: block;
+                  text-decoration: none;
+                  color: var(--theme-clr3);
+               }
+            }
+         }
+
+         .bellIcon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--theme-bg-color4);
+            padding: 10px;
+            border-radius: 4px;
+            @include flex-justify-center;
+
+            @media (max-width:1070px) {
+               display: none;
+            }
+
+            svg {
+               width: 20px;
+               height: auto;
+               color: var(--theme-clr);
+            }
+         }
+
+         .border-data {
+            border: none;
+
+            @media (max-width:1070px) {
+               width: 100%;
+               position: absolute;
+               bottom: 160px;
+               transform: translateX(-30px);
+               border: 1px solid rgba(0, 0, 0, .2);
+            }
+         }
+
+         .userAccountDetails {
+            max-width: 300px;
+            height: auto;
+            background-color: var(--theme-bg-color4);
+            border-radius: 50px;
+            padding: 10px 20px;
+            position: relative;
+
+            @media (max-width:1070px) {
+               position: absolute;
+               bottom: 100px;
+               z-index: 20;
+            }
+
+            .userAccountText {
+               padding: 0px 30px 0px 0px;
+
+               h4 {
+                  @include paragraph-sm;
+                  text-decoration: none;
+                  color: var(--theme-font-color1);
+               }
+            }
+
+            .userAccountImgAbsolute {
+               position: absolute;
+               top: 0px;
+               right: 0px;
+
+               .userAccountImg {
+                  width: 44px;
+                  height: 44px;
+                  object-fit: cover;
+                  border-radius: 50%;
+
+
+                  img {
+                     width: 100%;
+                     height: 100%;
+                     object-fit: cover;
+                     border-radius: 50%;
+                  }
+               }
+            }
+         }
+      }
+
+      .blackMainData.show {
+         width: 300px;
+         padding: 60px 0px 0px 30px;
+         transition: all 0.2s ease-in-out;
+
+         @media (max-width:576px) {
+            width: 250px;
+
+         }
+      }
+
+      .hamburger {
+         display: none;
+
+         @media (max-width:1070px) {
+            display: block;
+         }
+
+         .hamburgerIcon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--theme-bg-color4);
+            padding: 10px;
+            border-radius: 4px;
+            @include flex-justify-center;
+            color: var(--theme-clr);
+            @include paragraph-md;
+         }
+      }
+   }
+}
